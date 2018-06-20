@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<style>
+	*{padding: 0;margin: 0}
+	.box{
+		width: 300px;
+		margin: 30px auto;
+		/* background-color: pink; */
+	}
+	.box ul{
+		list-style: none;
+	}
+	.box li{
+		line-height: 30px;
+	}
+	.box span{
+		margin: auto 5px;
+	}
+	.current{
+		background-color:#aaa!important;
+	}
+</style>
+<script>
+
+	window.onload=function(){
+	var lis = document.getElementsByTagName("li");
+	//alert(lis.length);
+	for(var i=0; i<lis.length; i++){
+		if(i % 2 == 0){
+			lis[i].style.backgroundColor="#eee";
+		}
+		else{
+		    lis[i].style.backgroundColor="#ddd";
+		}
+		lis[i].onmouseover=function () {
+		     this.className="current";
+		}
+		lis[i].onmouseout=function(){
+		     this.className="";
+		}
+	}
+}
+</script>
+</head>
+<body>
+	<div class="box">
+	<ul><li><span>隔行变色</span><span>第二列</span><span>用span实现</span></li>
+	    <li><span>隔行变色</span><span>第二列</span><span>用span实现</span></li>
+	    <li><span>隔行变色</span><span>第二列</span><span>用span实现</span></li>
+	    <li><span>隔行变色</span><span>第二列</span><span>用span实现</span></li>
+	    <li><span>隔行变色</span><span>第二列</span><span>用span实现</span></li>
+	    <li><span>隔行变色</span><span>第二列</span><span>用span实现</span></li>
+	    <li><span>隔行变色</span><span>第二列</span><span>用span实现</span></li>
+	    <li><span>隔行变色</span><span>第二列</span><span>用span实现</span></li>
+	</ul>
+	</div>
+</body>
+</html>
